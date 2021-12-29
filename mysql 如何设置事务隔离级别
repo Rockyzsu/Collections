@@ -1,0 +1,49 @@
+1. 查看当前事物级别：SELECT @@tx_isolation;
+
+   ![mysql 如何设置事务隔离级别](https://exp-picture.cdn.bcebos.com/64a62a0f64781423d3b4038daac2bbd6e0d0b2a0.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80)
+
+2. 
+
+   设置mysql的隔离级别：set session transaction isolation level 设置事务隔离级别
+
+3. 
+
+   设置read uncommitted级别：set session transaction isolation level read uncommitted;
+
+   查看设置结果：SELECT @@tx_isolation;
+
+   ![mysql 如何设置事务隔离级别](https://exp-picture.cdn.bcebos.com/40d2d0e8b004541ba8028795869a310e1699a6a0.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80)
+
+   ![mysql 如何设置事务隔离级别](https://exp-picture.cdn.bcebos.com/f367139a310e17999727cf0bc9406afec214a3a0.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80)
+
+4. 
+
+   设置read committed级别：set session transaction isolation level read committed
+
+   查看设置结果：SELECT @@tx_isolation;
+
+   ![mysql 如何设置事务隔离级别](https://exp-picture.cdn.bcebos.com/c255efc595ee41c1312ad9e08d88912ca4ca9ba0.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80)
+
+   ![mysql 如何设置事务隔离级别](https://exp-picture.cdn.bcebos.com/07c98f2ca5cadce81c45754ffcf7980e5e2095a0.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80)
+
+5. 
+
+   设置repeatable read级别：set session transaction isolation level repeatable read;
+
+   查看设置结果：SELECT @@tx_isolation;
+
+   ![mysql 如何设置事务隔离级别](https://exp-picture.cdn.bcebos.com/994f412043715fdba52dcc89468920c5270f8ca0.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80)
+
+   ![mysql 如何设置事务隔离级别](https://exp-picture.cdn.bcebos.com/274e9635dd8a59dede0afdb2b370d5413b8c84a0.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80)
+
+6. 6
+
+   设置serializable级别：set session transaction isolation level serializable
+
+   查看设置结果：SELECT @@tx_isolation;
+
+   ![mysql 如何设置事务隔离级别](https://exp-picture.cdn.bcebos.com/89402670d5413a8c0605d0bc1ffc508c9ace81a0.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80)
+
+   ![mysql 如何设置事务隔离级别](https://exp-picture.cdn.bcebos.com/95bd4e8c9bcec7f82c7a286e034ce54a2e27fba0.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80)
+
+   END
