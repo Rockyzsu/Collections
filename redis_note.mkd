@@ -1,0 +1,13 @@
+# redis
+```
+config get dir # get current redis folder
+```
+
+```
+redis.config
+
+save 900 1 : save file after 900s when file change 1 times
+```
+
+rdb default 
+appendonly

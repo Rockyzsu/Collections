@@ -1,0 +1,17 @@
+解决go包管理代理网址无法访问：proxy.golang.org
+默认使用的是proxy.golang.org，在国内无法访问，如下图所示：
+
+bogon:demo-path user$ make build_darwin
+rm -rf target/demo-0.6.0 
+mkdir -p target/demo-0.6.0/bin 
+env CGO_ENABLED=1 GO111MODULE=on go run build/spec.go target/demo-0.6.0/bin/demo-spec-0.6.0.yaml
+go: github.com/StackExchange/wmi@v0.0.0-20190523213315-cbe66965904d: Get "https://proxy.golang.org/github.com/%21stack%21exchange/wmi/@v/v0.0.0-20190523213315-cbe66965904d.mod": dial tcp 34.64.4.17:443: i/o timeout
+make: *** [build_yaml] Error 1
+bogon:demo-path user$ make build_darwin
+解决方法：
+换一个国内能访问的代理地址：https://goproxy.cn
+
+执行命令：
+
+go env -w GOPROXY=https://goproxy.cn
+重新执行命令，完美通过！

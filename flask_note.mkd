@@ -1,0 +1,25 @@
+# flask note
+
+url route should start with /,
+@app.route('/api)
+
+
+
+```
+解决方案
+代码如下
+
+import requests
+
+s = requests.session()
+
+s.auth = ('用户名', '密码')
+
+res = s.get("URL")
+#获取请求的json数据
+data = res.json()
+还有更简单的
+
+from requests.auth import HTTPBasicAuth
+requests.get('https://api.github.com/user', auth=HTTPBasicAuth('user', 'pass'))
+```

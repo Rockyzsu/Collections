@@ -1,0 +1,28 @@
+remove all the code that can't work in my repo
+
+
+
+----
+```
+>>> x=[{1,2,3},{4,5,6},{7,8,9}]
+>>> set.intersection(*x)
+set()
+>>> 
+
+```
+----
+
+```
+除了做多重条件判断外，还可以用来自己和自己取或操作，实现重试。
+
+例如api_1()可能成功也可能失败，所以需要尝试运行3次，那么代码可以这样写：
+
+weather = api_1() or api_1() or api_1()
+```
+
+----
+## partial function is very useful
+----
+```
+select host_id, count(host_id) from host_info group by host_id, platform having count(host_id) > 1
+```
